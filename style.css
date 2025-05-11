@@ -90,15 +90,19 @@ img.logo {
 }
 
 /* Course Benefits Section */
-.course-benefits, .how-it-works, .registration-section {
+.course-benefits {
     padding: 60px 0;
 }
 
 .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    text-align: center;
+    display: flex; /* שימוש ב-Flexbox למרכוז ופריסה */
+    flex-wrap: wrap; /* כדי שפריטים יירדו שורה */
+    gap: 30px; /* מרווח בין פריטים */
+    justify-content: center; /* מרכוז פריטים אופקית (גם בשורה האחרונה) */
+    align-items: stretch; /* ודא שפריטים באותה שורה שומרים על גובה שווה */
+    padding: 20px 0; /* מרווח פנימי מסביב לגריד */
+    max-width: 960px; /* הגבלת רוחב הגריד */
+    margin: 0 auto; /* מרכוז הגריד בתוך הקונטיינר */
 }
 
 .benefit-item {
@@ -107,6 +111,16 @@ img.logo {
     border-radius: 8px;
     box-shadow: 0 5px 25px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    /* הגדרות גודל בסיסיות לפריט */
+    width: 280px; 
+    flex-basis: 280px; 
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 300px; 
 }
 
 .benefit-item:hover {
@@ -115,8 +129,9 @@ img.logo {
 }
 
 .benefit-item img {
-    width: 60px;
+    width: 60px; 
     height: 60px;
+    object-fit: contain; 
     margin-bottom: 20px;
     opacity: 0.8;
 }
@@ -127,38 +142,90 @@ img.logo {
     color: #0056b3;
 }
 
-/* How It Works Section */
+/* How It Works Section - Flowchart Style */
 .how-it-works {
     background-color: #e9ecef;
+    padding: 60px 0;
 }
 
-.steps-list {
-    list-style-type: none;
-    padding-left: 0;
-    max-width: 600px;
-    margin: 0 auto;
+.steps-flow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 
-.steps-list li {
-    font-size: 1.1em;
-    padding: 15px 0;
-    border-bottom: 1px dashed #ccc;
+.step-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px; 
+    width: 80%;
+    max-width: 500px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
     display: flex;
     align-items: center;
-}
-.steps-list li:last-child {
-    border-bottom: none;
+    text-align: right; 
 }
 
-.steps-list li strong {
-    color: #007bff;
-    margin-left: 10px; /* For RTL */
+.step-icon-wrapper {
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    margin-left: 20px; 
+    flex-shrink: 0; 
 }
+
+/* אם משתמשים בתמונות במקום Font Awesome */
+.step-icon-wrapper img {
+    width: 60%; 
+    height: 60%;
+    object-fit: contain;
+    filter: invert(1) brightness(2); 
+}
+
+
+.step-number { 
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0056b3;
+    margin-right: 15px;
+    display: none; 
+}
+
+.step-content h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.3em;
+}
+.step-content p {
+    margin-bottom: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+.step-arrow {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.step-arrow:last-of-type { 
+    display: none;
+}
+
 
 /* Registration Section */
 .registration-section {
-    background-color: #fff; /* Or a light blue like #f0f8ff */
+    background-color: #fff;
     text-align: center;
+    padding: 60px 0;
 }
 
 #courseRegistrationForm {
@@ -204,7 +271,7 @@ img.logo {
     width: 100%;
     padding: 15px;
     font-size: 1.1em;
-    background-color: #28a745; /* Green for submit */
+    background-color: #28a745; 
     color: #fff;
     border: none;
 }
@@ -240,6 +307,11 @@ footer {
 }
 
 /* Responsive Adjustments */
+@media (max-width: 991px) { /* התאמת נקודת שבירה למרכוז הגריד */
+    /* אין שינוי מיוחד, Flexbox יתנהל כצפוי */
+}
+
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2.2em;
@@ -254,7 +326,28 @@ footer {
         font-size: 1em;
         padding: 12px 25px;
     }
-    .benefits-grid {
-        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    .step-item {
+        width: 95%; 
+        flex-direction: column; 
+        text-align: center;
+    }
+    .step-icon-wrapper {
+        margin-left: 0;
+        margin-bottom: 15px; 
+    }
+    .step-content {
+        text-align: center; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    .hero-section .subtitle {
+        font-size: 1em;
     }
 }
