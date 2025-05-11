@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>קורס ChatGPT מעשי לעובדים - הירשמו עכשיו!</title>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="gpt.png">
+    <link rel="icon" type="image/png" href="favicon.png"> <!-- הוסף קובץ favicon.png או שנה את הנתיב -->
 </head>
 <body>
     <div class="landing-page">
         <header class="hero-section">
             <div class="container">
-                <img src="gpt.png" alt="לוגו ChatGPT" class="logo"> <!-- החלף בתמונה משלך או הסר -->
+                <img src="gpt.png" alt="לוגו ChatGPT" class="logo">
                 <h1>שדרגו את יום העבודה שלכם עם ChatGPT!</h1>
                 <p class="subtitle">קורס קצר ומעשי במייל שילמד אתכם, צעד אחר צעד, איך להשתמש ב-ChatGPT כדי לחסוך זמן, להגביר יצירתיות ולהיות פרודוקטיביים יותר - גם אם אין לכם שום ניסיון קודם!</p>
                 <a href="#registration-form" class="cta-button hero-cta">כן, אני רוצה להירשם לקורס!</a>
@@ -22,21 +23,21 @@
         <section class="course-benefits">
             <div class="container">
                 <h2>מה תלמדו בקורס? (והכל במייל, בקצב שלכם!)</h2>
-                <div class="benefits-grid">
+                <div class="benefits-grid"> <!-- שימוש ב-Flexbox כאן -->
                     <div class="benefit-item">
-                        <img src="email.png" alt="אייקון מייל">
-                        <h3>כתיבת מיילים מקצועית</h3>
-                        <p>למדו איך לנסח מיילים, לשפר טקסטים קיימים ולהתאים את הטון בקלי קלות.</p>
+                        <img src="brainstorm.png" alt="אייקון יצירת רעיונות">
+                        <h3>יצירת רעיונות ופתרונות</h3>
+                        <p>השתמשו ב-ChatGPT לסיעור מוחות, קבלת רעיונות חדשניים ופתרון אתגרים.</p>
                     </div>
                     <div class="benefit-item">
-                        <img src="summary.png" alt="אייקון סיכום">
+                        <img src="summary.png" alt="אייקון סיכום מידע">
                         <h3>סיכום מידע מהיר</h3>
                         <p>חסכו זמן יקר על ידי סיכום מסמכים ארוכים ומיילים מורכבים תוך שניות.</p>
                     </div>
                     <div class="benefit-item">
-                        <img src="brainstorm.png" alt="אייקון סיעור מוחות">
-                        <h3>יצירת רעיונות ופתרונות</h3>
-                        <p>השתמשו ב-ChatGPT לסיעור מוחות, קבלת רעיונות חדשניים ופתרון אתגרים.</p>
+                        <img src="email.png" alt="אייקון כתיבת מיילים">
+                        <h3>כתיבת מיילים מקצועית</h3>
+                        <p>למדו איך לנסח מיילים, לשפר טקסטים קיימים ולהתאים את הטון בקלי קלות.</p>
                     </div>
                     <div class="benefit-item">
                         <img src="learning.png" alt="אייקון למידה">
@@ -50,12 +51,43 @@
         <section class="how-it-works">
             <div class="container">
                 <h2>איך זה עובד? פשוט ונוח!</h2>
-                <ol class="steps-list">
-                    <li><strong>נרשמים כאן למטה</strong> - זה לוקח פחות מדקה.</li>
-                    <li><strong>מקבלים 7 מיילים ישירות לתיבה שלכם</strong> - מייל אחד כל יומיים, עם הסברים ברורים ותרגולים מעשיים.</li>
-                    <li><strong>מתרגלים בזמנכם הפנוי</strong> - כל מייל כולל 3 תרגילים קלים ליישום מיידי.</li>
-                    <li><strong>משדרגים את יכולותיכם</strong> - ומתחילים להשתמש ב-ChatGPT כמו מקצוענים!</li>
-                </ol>
+                <div class="steps-flow-container">
+                    <div class="step-item">
+                        <div class="step-icon-wrapper"><i class="fas fa-user-plus"></i></div>
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>נרשמים כאן למטה</h3>
+                            <p>זה לוקח פחות מדקה.</p>
+                        </div>
+                    </div>
+                    <div class="step-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="step-item">
+                        <div class="step-icon-wrapper"><i class="fas fa-envelope-open-text"></i></div>
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>מקבלים 7 מיילים לתיבה</h3>
+                            <p>מייל אחד כל יומיים, עם הסברים ותרגולים.</p>
+                        </div>
+                    </div>
+                    <div class="step-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="step-item">
+                        <div class="step-icon-wrapper"><i class="fas fa-laptop-code"></i></div>
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>מתרגלים בזמנכם הפנוי</h3>
+                            <p>כל מייל כולל 3 תרגילים ליישום מיידי.</p>
+                        </div>
+                    </div>
+                    <div class="step-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="step-item">
+                        <div class="step-icon-wrapper"><i class="fas fa-rocket"></i></div>
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>משדרגים את יכולותיכם</h3>
+                            <p>ומתחילים להשתמש ב-ChatGPT כמו מקצוענים!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         
