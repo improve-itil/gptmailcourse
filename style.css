@@ -1,0 +1,260 @@
+/* General Styles */
+body {
+    font-family: 'Assistant', sans-serif;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    direction: rtl;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #0056b3; /* Primary blue */
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 1.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+img.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1 {
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.hero-section .subtitle {
+    font-size: 1.3em;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffc107; /* Accent yellow */
+    color: #333;
+    padding: 15px 35px;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px; /* Pill shape */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    background-color: #e0a800;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Course Benefits Section */
+.course-benefits, .how-it-works, .registration-section {
+    padding: 60px 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.benefit-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.benefit-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.benefit-item h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+/* How It Works Section */
+.how-it-works {
+    background-color: #e9ecef;
+}
+
+.steps-list {
+    list-style-type: none;
+    padding-left: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.steps-list li {
+    font-size: 1.1em;
+    padding: 15px 0;
+    border-bottom: 1px dashed #ccc;
+    display: flex;
+    align-items: center;
+}
+.steps-list li:last-child {
+    border-bottom: none;
+}
+
+.steps-list li strong {
+    color: #007bff;
+    margin-left: 10px; /* For RTL */
+}
+
+/* Registration Section */
+.registration-section {
+    background-color: #fff; /* Or a light blue like #f0f8ff */
+    text-align: center;
+}
+
+#courseRegistrationForm {
+    max-width: 500px;
+    margin: 30px auto 0 auto;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.form-submit-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: #28a745; /* Green for submit */
+    color: #fff;
+    border: none;
+}
+.form-submit-button:hover {
+    background-color: #218838;
+}
+
+#form-status-message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+#form-status-message.success {
+    color: #28a745;
+}
+#form-status-message.error {
+    color: #dc3545;
+}
+
+
+.privacy-note {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #adb5bd;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .hero-section .subtitle {
+        font-size: 1.1em;
+    }
+    .cta-button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+    .benefits-grid {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
+}

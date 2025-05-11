@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קורס ChatGPT מעשי לעובדים - הירשמו עכשיו!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="landing-page">
+        <header class="hero-section">
+            <div class="container">
+                <img src="gpt.png" alt="לוגו ChatGPT" class="logo"> <!-- החלף בתמונה משלך או הסר -->
+                <h1>שדרגו את יום העבודה שלכם עם ChatGPT!</h1>
+                <p class="subtitle">קורס קצר ומעשי במייל שילמד אתכם, צעד אחר צעד, איך להשתמש ב-ChatGPT כדי לחסוך זמן, להגביר יצירתיות ולהיות פרודוקטיביים יותר - גם אם אין לכם שום ניסיון קודם!</p>
+                <a href="#registration-form" class="cta-button hero-cta">כן, אני רוצה להירשם לקורס!</a>
+            </div>
+        </header>
+
+        <section class="course-benefits">
+            <div class="container">
+                <h2>מה תלמדו בקורס? (והכל במייל, בקצב שלכם!)</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <img src="email.png" alt="אייקון מייל">
+                        <h3>כתיבת מיילים מקצועית</h3>
+                        <p>למדו איך לנסח מיילים, לשפר טקסטים קיימים ולהתאים את הטון בקלי קלות.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <img src="summary.png" alt="אייקון סיכום">
+                        <h3>סיכום מידע מהיר</h3>
+                        <p>חסכו זמן יקר על ידי סיכום מסמכים ארוכים ומיילים מורכבים תוך שניות.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <img src="brainstorm.png" alt="אייקון סיעור מוחות">
+                        <h3>יצירת רעיונות ופתרונות</h3>
+                        <p>השתמשו ב-ChatGPT לסיעור מוחות, קבלת רעיונות חדשניים ופתרון אתגרים.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <img src="learning.png" alt="אייקון למידה">
+                        <h3>למידה והבנת מושגים</h3>
+                        <p>הפכו את ChatGPT למורה הפרטי שלכם להסבר מושגים מורכבים בשפה פשוטה.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container">
+                <h2>איך זה עובד? פשוט ונוח!</h2>
+                <ol class="steps-list">
+                    <li><strong>נרשמים כאן למטה</strong> - זה לוקח פחות מדקה.</li>
+                    <li><strong>מקבלים 7 מיילים ישירות לתיבה שלכם</strong> - מייל אחד כל יומיים, עם הסברים ברורים ותרגולים מעשיים.</li>
+                    <li><strong>מתרגלים בזמנכם הפנוי</strong> - כל מייל כולל 3 תרגילים קלים ליישום מיידי.</li>
+                    <li><strong>משדרגים את יכולותיכם</strong> - ומתחילים להשתמש ב-ChatGPT כמו מקצוענים!</li>
+                </ol>
+            </div>
+        </section>
+        
+        <section id="registration-form" class="registration-section">
+            <div class="container">
+                <h2>מוכנים להתחיל? ההרשמה בחינם!</h2>
+                <p>מלאו את הפרטים ותתחילו לקבל את המיילים של הקורס:</p>
+                <form id="courseRegistrationForm">
+                    <div class="form-group">
+                        <label for="name">שם מלא:</label>
+                        <input type="text" id="name" name="name" placeholder="לדוגמה: ישראל ישראלי" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">כתובת מייל:</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <button type="submit" class="cta-button form-submit-button">אני רוצה להצטרף לקורס!</button>
+                    <p id="form-status-message"></p>
+                </form>
+                <p class="privacy-note">פרטיותכם חשובה לנו. לא נעביר את פרטיכם לצד שלישי.</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>© <span id="currentYear"></span> כל הזכויות שמורות. קורס ChatGPT לעובדים.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
